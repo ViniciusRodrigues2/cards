@@ -1,0 +1,114 @@
+@charset "UTF-8";
+@keyframes mexer {
+    0%{
+        transform: translateX(0);
+    }
+    50%{
+        transform: translate(100px);
+    }
+    100%{
+        transform: translate(0);
+    }
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: #1F2842;
+}
+.text img{
+   display: none;
+}
+.text h1{
+    margin-top: 20px;
+    font-size: 3em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-bottom: 3em;
+    color: white;
+}
+.container{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 1150px;
+    height: 100vh;
+}
+.container .card{
+    max-width: 400px;
+    width: 100%;
+    position: relative;
+    border: 1px solid rgb(255, 255, 255);
+    margin: 20px;
+    text-align: center;
+    padding: 10px;
+    transform: translateY(0);
+    border-radius: 20px;
+    transition: all .3s ease-in-out;
+}
+.container .card h1{
+    font-size: 3em;
+}
+.container .card .content{
+    width: 90%;
+    margin: 0 auto;
+}
+.container .card .content p{
+    color: rgb(153, 153, 153);
+    position: relative;
+    font-size: .85em;
+}
+.container .card a{
+    margin-top: 20px;
+    text-decoration: none;
+    text-align: center;
+    display: inline-block;
+    background-color: #179e4000;
+    padding: 10px 30px;
+    border-radius: 50px;
+    color: rgb(0, 0, 0);
+    border: 1px solid black;
+    font-size: .75em;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.container .card:hover{
+    background-color: black;
+    color: white;
+    transform: translateY(-20px);
+    box-shadow: 2px 2px 10px rgb(41, 41, 41);
+    border: 1px solid transparent;
+}
+.container .card:hover .content p{
+    color: white;
+}
+.container .card:hover a{
+    background-color: white;
+    color: #0e0e0e;
+    border: 1px solid transparent;
+}
+.container .card:hover img{
+    filter: invert(1);
+}
+.container .card img{
+    max-width: 100px;
+    width: 100%;
+    filter: invert(0);
+    background-color: transparent;
+}
+@media screen and (max-width:800px) {
+    .container{
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+}
