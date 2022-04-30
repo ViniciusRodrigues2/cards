@@ -1,116 +1,266 @@
 @charset "UTF-8";
-@keyframes mexer {
-    100%{
-        background-position: 200px 0;
-    }
-}
+
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
 }
-
 body{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    background-color: #1F2842;
-    filter: blur(50);
+    background-color: #0A011A;
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
 }
-.text img{
-   display: none;
-}
-.text h1{
-    margin-top: 20px;
-    font-size: 8em;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    margin-bottom: 3em;
-    color: transparent;
-    background-image: url('thick-colorful-stripes.jpg');
-    background-size: cover;
-    background-clip: text;
-    -webkit-text-stroke: 2px white;
-    -webkit-background-clip: text;
-    animation: mexer 5s infinite ease-in-out;
-}
-.container{
-    position: relative;
+.Project-head{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 1150px;
+    background-color: #0A011A;
+    /* background-color: red; */
+    height: 12vh;
+}
+.Project-head .logo{
+    display: block;
+    max-width: 260px;
+    cursor: pointer;
+    align-content: center;
+    margin-top: .75em;
+    margin-left: 1.2em;
+    /* background-color: black; */
+}
+.Project-head .logo img{
+    width: 100%;
+}
+.Project-head .menu-nav{
+    display: flex;
+    align-items: center;
+    margin-top: .75em;
+    margin-right: 4em;
+    gap: 4px;
+}
+.Project-head .menu-nav  .item-1{
+    cursor: pointer;
+}
+.Project-head .menu-nav  .item-1 a img{
+    width: 40px;
+}
+.Project-head .menu-nav  .item-2 a img{
+    width: 40px;
+}
+.conteudo-project{
+    width: 100%;
     height: 100vh;
 }
-.container .card{
-    max-width: 400px;
+.conteudo-project .video-project{
+    padding: 0 1.6em;
+    margin: 0 15px;
+}
+.conteudo-project .video-project .video
+span{
+    position: absolute;
+    display: block;
+}
+.conteudo-project .video-project .video span:nth-child(1){
+    top: 0;
+    left: -100%;
     width: 100%;
-    position: relative;
-    border: 1px solid rgb(255, 255, 255);
-    margin: 20px;
+    height: 5px;
+    background: linear-gradient(90deg,transparent,rgb(85, 186, 219));
+    animation: animate1 2s linear infinite;
+    animation-delay: 0s;
+}
+@keyframes animate1{
+    0%{
+        left: -100%;
+    }
+    50%,100%{
+        left: 100%;
+    }
+}
+.conteudo-project .video-project .video span:nth-child(3){
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(270deg,transparent,rgb(205, 25, 205));
+    animation: animate3 2s linear infinite;
+    animation-delay: 1s;
+    z-index: 1000;
+}
+@keyframes animate3{
+    0%{
+        right: -100%;
+    }
+    50%,100%{
+        right: 100%;
+    }
+}
+.conteudo-project .video-project .video span:nth-child(2){
+    top: -100%;
+    right: 0;
+    width: 5px;
+    height: 100%;
+    background: linear-gradient(180deg,transparent,rgb(104, 86, 239));
+    animation: animate2 2s linear infinite;
+    animation-delay: 0.5s;
+}
+@keyframes animate2{
+    0%{
+        top: -100%;
+    }
+    50%,100%{
+        top: 100%;
+    }
+}
+.conteudo-project .video-project .video span:nth-child(4){
+    bottom: -100%;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    background: linear-gradient(360deg,transparent,rgb(226, 181, 47));
+    animation: animate4 2s linear infinite;
+    animation-delay: 1.5s;
+}
+@keyframes animate4{
+    0%{
+        bottom: -100%;
+    }
+    50%,100%{
+        bottom: 100%;
+    }
+}
+.conteudo-project .video-project .video{
+    display: flex;
+    align-items: center;
     text-align: center;
-    padding: 10px;
-    background-color:white;
-    transform: translateY(0);
-    border-radius: 20px;
-    transition: all .3s ease-in-out;
-}
-.container .card h1{
-    font-size: 3em;
-}
-.container .card .content{
-    width: 90%;
-    margin: 0 auto;
-}
-.container .card .content p{
-    color: rgb(153, 153, 153);
+    max-width: 1300px;
     position: relative;
-    font-size: .85em;
+    overflow: hidden;
 }
-.container .card a{
-    margin-top: 20px;
-    text-decoration: none;
-    text-align: center;
-    display: inline-block;
-    background-color: #0e0e0e;
-    padding: 10px 30px;
-    border-radius: 50px;
-    color: rgb(255, 255, 255);
-    border: 1px solid black;
-    font-size: .75em;
-    font-weight: 600;
+.conteudo-project .video-project .video video{
+    width: 100%;
+}
+
+.conteudo-project .card-project{
+    display: flex;
+}
+.conteudo-project .card-project .card-project-info{
+    display: flex;
+    align-items: center;
+}
+.conteudo-project .card-project .card-project-info .buttons{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.conteudo-project .card-project .card-project-info .column-project{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* background-color: blue; */
+    position: relative;
+    margin-left: 3em;
+    margin-top: 4em;
+}
+.conteudo-project .card-project .card-project-info .column-project .content-z{
+    display: block;
+    text-align: left;
+    margin-right: -1.5em;
+    padding-left: 1.3em;
+    width: 100%;
+    /* background-color: red; */
+}
+.conteudo-project .card-project .card-project-info .column-project .content-z p{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    display: block;
+    font-size: 1.8em;
+    font-weight: 500;
+    width: 100%;
+}
+.conteudo-project .card-project .card-project-info .column-project .content-z p span{
+    font-weight: 800;
+}
+.conteudo-project .card-project .card-project-info .column-project .content-z p span:nth-child(1){
     text-transform: uppercase;
 }
-.container .card:hover{
-    background-color: black;
-    color: white;
-    transform: translateY(-20px);
-    box-shadow: 2px 2px 10px rgb(41, 41, 41);
-    border: 1px solid transparent;
+.conteudo-project .card-project .card-project-info .buttons .btns img{
+    width: 280px;
 }
-.container .card:hover .content p{
-    color: white;
+.conteudo-project .card-project .card-project-info .buttons .more-inf{
+    max-width: 200px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
 }
-.container .card:hover a{
-    background-color: white;
-    color: #0e0e0e;
-    border: 1px solid transparent;
-}
-.container .card:hover img{
-    filter: invert(1);
-}
-.container .card img{
-    max-width: 100px;
+.conteudo-project .card-project .card-project-info .buttons .more-inf img{
     width: 100%;
-    filter: invert(0);
-    background-color: transparent;
+}
+.conteudo-project .card-project .card-project-info .project-img{
+    padding-left: 8em;
+}
+.conteudo-project .card-project .card-project-info .project-img img{
+    width: 450px;
 }
 @media screen and (max-width:800px) {
-    .container{
-        flex-wrap: wrap;
+    .Project-head .logo{
+        margin-left: 0;
+        max-width: 200px;
+    }
+    .Project-head .menu-nav{
+        display: flex;
         align-items: center;
-        justify-content: center;
+        margin-top: .75em;
+        margin-right: 1em;
+        gap: 4px;
+    }
+    .Project-head .menu-nav  .item-1{
+        cursor: pointer;
+    }
+    .Project-head .menu-nav  .item-1 a img{
+        width: 35px;
+    }
+    .Project-head .menu-nav  .item-2 a img{
+        width: 35px;
+    }
+    .conteudo-project .video-project .video{
+        max-width: 100%;
+        top: 30px;
+    }
+    .conteudo-project .video-project .video video{
+        width: 100%;
+    }
+    .conteudo-project .video-project{
+        padding: 0;
+    }
+    .conteudo-project .card-project .card-project-info{
+        flex-wrap: wrap;
+    }
+    .conteudo-project .card-project .card-project-info .project-img{
+        padding: 0;
+        display: block;
+        margin: 1.3em auto;
         text-align: center;
+        max-width: 380px;
+    }
+    .conteudo-project .card-project .card-project-info .project-img img{
+        width: 100%;
+    }
+    .conteudo-project .card-project .card-project-info .column-project{
+        display: block;
+        width: 100%;
+        margin-left: 0;
+        text-align: center;
+    }
+    .conteudo-project .card-project .card-project-info .buttons .btns{
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+    }
+    .conteudo-project .card-project .card-project-info .buttons .more-inf{
+        position: absolute;
+       left: 8em;
     }
 }
